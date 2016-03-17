@@ -18,3 +18,13 @@ verify
 ```
 aws elasticache describe-cache-clusters --cache-cluster-id ydcluster --region us-east-1
 ```
+Redis supports singlenode clusters and replication groups, cannot partition your data across multiple redis clusters.  
+In redis, scaling is achieved by choosing a different node instance type.(If app is read-intensive,you can create multi read replicas to distribute the load
+######RDS
+```
+aws rds create-db-instance --db-instance-identifier yddb --allocated-storage 10 --db-instance-class db.t2.micro --engine mysql --master-username root --master-user-password password --region us-east-1
+```
+verify:
+```
+aws rds describe-db-instances --db-instance-identifier yddb --region us-east-1
+```
