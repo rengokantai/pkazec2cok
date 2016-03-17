@@ -1,5 +1,10 @@
 #### pkazec2cok
 #####6 AWS data service
+######dynamodb
+
+If youuse eventually consistent reads versus strongly cnosistent reads, then you will get twice as many reads per second.  
+
+Two querying operations:query and scan. you can use the query operation to query a table using the hash attribute and an optional range filter or the secondary hash key. The scan operation reads every item in the table or the secondary index
 ######elasticache
 create subnet group
 ```
